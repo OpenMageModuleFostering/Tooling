@@ -36,3 +36,56 @@ function fetch_file_with_cache($url, $throttle = 0) {
 
 }
 
+
+function arrayDeepSet(&$array, $value, ...$keys) {
+    if (isset($keys[4])) {
+        if (!isset($array[$keys[0]])) {
+            $array[$keys[0]] = [];
+        }
+        if (!isset($array[$keys[0]][$keys[1]])) {
+            $array[$keys[0]][$keys[1]] = [];
+        }
+        if (!isset($array[$keys[0]][$keys[1]][$keys[2]])) {
+            $array[$keys[0]][$keys[1]][$keys[2]] = [];
+        }
+        if (!isset($array[$keys[0]][$keys[1]][$keys[2]][$keys[3]])) {
+            $array[$keys[0]][$keys[1]][$keys[2]][$keys[3]] = [];
+        }
+        $array[$keys[0]][$keys[1]][$keys[2]][$keys[3]][$keys[4]] = $value;
+        return;
+    }
+    if (isset($keys[3])) {
+        if (!isset($array[$keys[0]])) {
+            $array[$keys[0]] = [];
+        }
+        if (!isset($array[$keys[0]][$keys[1]])) {
+            $array[$keys[0]][$keys[1]] = [];
+        }
+        if (!isset($array[$keys[0]][$keys[1]][$keys[2]])) {
+            $array[$keys[0]][$keys[1]][$keys[2]] = [];
+        }
+        $array[$keys[0]][$keys[1]][$keys[2]][$keys[3]] = $value;
+        return;
+    }
+    if (isset($keys[2])) {
+        if (!isset($array[$keys[0]])) {
+            $array[$keys[0]] = [];
+        }
+        if (!isset($array[$keys[0]][$keys[1]])) {
+            $array[$keys[0]][$keys[1]] = [];
+        }
+        $array[$keys[0]][$keys[1]][$keys[2]] = $value;
+        return;
+    }
+    if (isset($keys[1])) {
+        if (!isset($array[$keys[0]])) {
+            $array[$keys[0]] = [];
+        }
+        $array[$keys[0]][$keys[1]] = $value;
+        return;
+    }
+    if (isset($keys[0])) {
+        $array[$keys[0]] = $value;
+    }
+}
+

@@ -27,6 +27,7 @@ foreach ($packagesPrimary['includes'] as $key => $value) {
 $packageNames = [];
 $packageRepo = json_decode($packagesFile, true)['packages'];
 $numberOfPackages = count($packageRepo);
+$sortedPackagesByNameAndVersion = [];
 echo "Number of Packages: " . $numberOfPackages . "\n";
 $counter = 0;
 foreach ($packageRepo as $packageName => $packages) {
@@ -44,6 +45,21 @@ foreach ($packageRepo as $packageName => $packages) {
     }
     $packageNames[] = $packageName;
     foreach ($packages as $version => $packageDefinition) {
+        $packageVersion = explode(".", $version);
+        if (!isset($packageVersion[1])) {
+            $packageVersion[1] = 0;
+        }
+        if (!isset($packageVersion[2])) {
+            $packageVersion[2] = 0;
+        }
+        Tooling\arrayDeepSet(
+            $sortedPackagesByNameAndVersion,
+            $packageDefinition,
+            $packageName,
+            $packageVersion[0],
+            $packageVersion[1],
+            $packageVersion[2]
+        );
         Tooling\fetch_file_with_cache($packageDefinition['dist']['url']);
     }
     echo "D";
@@ -51,6 +67,8 @@ foreach ($packageRepo as $packageName => $packages) {
 
 
 file_put_contents(Tooling\getConfig('var_dir').'packageNames.json', json_encode($packageNames));
+
+var_dump($sortedPackagesByNameAndVersion);
 
 echo PHP_EOL;
 echo "memory peak usage: " . (memory_get_peak_usage(true)/1024/1024) . "MB\n";
