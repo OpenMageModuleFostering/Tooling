@@ -66,7 +66,7 @@ foreach ($packageRepo as $packageName => $packages) {
 }
 
 
-file_put_contents(Tooling\getConfig('var_dir').'packageNames.json', json_encode($packageNames));
+file_put_contents(Tooling\getConfig('var_dir').'packageNames.json', json_encode($packageNames, JSON_PRETTY_PRINT));
 
 var_dump($sortedPackagesByNameAndVersion);
 
