@@ -89,3 +89,36 @@ function arrayDeepSet(&$array, $value, ...$keys) {
     }
 }
 
+function passtruh_wrapper($command)
+{
+    echo "executing: ". $command . PHP_EOL;
+    passthru($command);
+}
+
+function initializeGitRepository($directory)
+{
+    mkdir($directory, 0777, true);
+    chdir($directory);
+    passtruh_wrapper('git init');
+    file_put_contents('.gitignore', '');
+}
+
+function addVersionToGitRepository($directory, $packageDefinition )
+{
+    chdir($directory);
+    passtruh_wrapper('git add .');
+    passtruh_wrapper('git rm -r .');
+    $content = fetch_file_with_cache($packageDefinition['dist']['url']);
+    $tempModulePath = getConfig('cache_dir').'/temp_module.tgz';
+    $tempModuleTarPath = getConfig('cache_dir').'/temp_module.tar';
+    unlink($tempModulePath);
+    unlink($tempModuleTarPath);
+    file_put_contents($tempModulePath, $content);
+    $phar = new \PharData($tempModulePath);
+    $phar->decompress();
+    $phar->extractTo($directory, null, true);
+    passtruh_wrapper('git add .');
+    passtruh_wrapper('git commit -m "import connect version '.$packageDefinition['version'].' "');
+
+}
+
