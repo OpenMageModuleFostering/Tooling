@@ -103,22 +103,69 @@ function initializeGitRepository($directory)
     file_put_contents('.gitignore', '');
 }
 
+function generateComposerJsonContent($packageDefinition)
+{
+    if(!isset($packageDefinition['license'])){
+        $packageDefinition['license'] = [];
+    }
+    if (count($packageDefinition['license']) < 1) {
+        $packageLicense = '';
+        file_put_contents(
+            getConfig('var_dir').'license_without.log',
+            $packageDefinition['name'].PHP_EOL,
+            FILE_APPEND
+        );
+    }
+    if (count($packageDefinition['license']) > 1) {
+        var_dump($packageDefinition);
+        throw new \Exception("license issue");
+    }
+    if (count($packageDefinition['license']) == 1) {
+        $packageLicense = $packageDefinition['license'][0];
+    }
+    $packageRealName = explode('/',$packageDefinition['name'])[1];
+    $vendorName = getConfig('new_vendor');
+    $authorsJson = json_encode($packageDefinition['authors'], JSON_PRETTY_PRINT);
+    $content = <<<JSON
+{
+    "name": "$vendorName/$packageRealName",
+    "type": "magento-module",
+    "license": "{$packageLicense}",
+    "homepage": "{$packageDefinition['homepage']}",
+    "description": "{$packageDefinition['description']}",
+    "authors": {$authorsJson},
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
+JSON;
+
+    return $content;
+
+}
+
 function addVersionToGitRepository($directory, $packageDefinition )
 {
+    $timestamp = microtime();
+    $timestamp = str_replace(' ', '_', $timestamp);
+    $timestamp = str_replace('.', '_', $timestamp);
     chdir($directory);
     passtruh_wrapper('git add .');
     passtruh_wrapper('git rm -r .');
     $content = fetch_file_with_cache($packageDefinition['dist']['url']);
-    $tempModulePath = getConfig('cache_dir').'/temp_module.tgz';
-    $tempModuleTarPath = getConfig('cache_dir').'/temp_module.tar';
-    unlink($tempModulePath);
-    unlink($tempModuleTarPath);
+    $tempModulePath = getConfig('cache_dir')."/temp{$timestamp}_module.tgz";
+    $tempModuleTarPath = getConfig('cache_dir')."/temp{$timestamp}_module.tar";
     file_put_contents($tempModulePath, $content);
-    $phar = new \PharData($tempModulePath);
+    echo "extracting package: {$packageDefinition['name']} in version {$packageDefinition['version']} \n";
+    $phar = new \PharData($tempModulePath, \FilesystemIterator::SKIP_DOTS);
     $phar->decompress();
     $phar->extractTo($directory, null, true);
+    unlink($tempModulePath);
+    unlink($tempModuleTarPath);
+    file_put_contents('composer.json', generateComposerJsonContent($packageDefinition));
     passtruh_wrapper('git add .');
-    passtruh_wrapper('git commit -m "import connect version '.$packageDefinition['version'].' "');
+    passtruh_wrapper('git commit -m "import connect version '.$packageDefinition['version'].' " --author="OpenMage Import Bot <flyingmana+openmage_bot@googlemail.com>"');
+    passtruh_wrapper('git tag -a '.$packageDefinition['version'].' -m "import connect version '.$packageDefinition['version'].' "');
 
 }
 
