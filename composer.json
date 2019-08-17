@@ -1,0 +1,12 @@
+{
+    "name": "openmage/tooling",
+    "description": "Tooling to make working on the many repositories of this Organization easier",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flyingmana",
+            "email": "flyingmana@googlemail.com"
+        }
+    ],
+    "require": {}
+}
