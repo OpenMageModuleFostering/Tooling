@@ -3,6 +3,8 @@
 namespace OpenMageModuleFostering\Tooling;
 
 
+use Github\Exception\RuntimeException;
+
 /**
  * @param string $path
  * @return mixed
@@ -168,4 +170,39 @@ function addVersionToGitRepository($directory, $packageDefinition )
     passtruh_wrapper('git tag -a '.$packageDefinition['version'].' -m "import connect version '.$packageDefinition['version'].' "');
 
 }
+
+function githubRepositoryExists(
+    \Github\Api\Repo $apiRepo,
+    $repositoryName,
+    $organizationName
+) {
+    try {
+        $repositoryInfo = $apiRepo->show($organizationName, $repositoryName);
+    } catch (RuntimeException $exception) {
+        // throws exception if repository does not exist
+        return false;
+    }
+    return true;
+}
+
+function githubRepositoryCreate(
+    \Github\Api\Repo $apiRepo,
+    $repositoryName,
+    $organizationName
+) {
+    $apiRepo->create(
+        $repositoryName,
+        $description = '',
+        $homepage = '',
+        $public = true,
+        $organization = $organizationName,
+        $hasIssues = true,
+        $hasWiki = false,
+        $hasDownloads = true,
+        $teamId = null,
+        $autoInit = false,
+        $hasProjects = true
+    );
+}
+
 
