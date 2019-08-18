@@ -205,4 +205,20 @@ function githubRepositoryCreate(
     );
 }
 
+function githubAddOrigin(
+    $gitDirectory,
+    $remoteUrl
+) {
+    chdir($gitDirectory);
+    passtruh_wrapper("git remote add origin $remoteUrl");
+}
+
+function githubPushRepository(
+    $gitDirectory,
+    $remoteUrl
+) {
+    chdir($gitDirectory);
+    passtruh_wrapper("git push --tags -f -u origin master");
+}
+
 

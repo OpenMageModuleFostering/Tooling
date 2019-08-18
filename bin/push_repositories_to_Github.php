@@ -22,6 +22,8 @@ echo "Number of Packages: " . $numberOfPackages . "\n";
 $counter = 0;
 foreach ($packageNames as $packageName) {
     $packageName = str_replace('connect20/', '', $packageName);
+    $gitDirectory = Tooling\getConfig('var_dir').'git_modules/'.$packageName;
+    $gitRemoteUrl = "git@github.com:OpenMageModuleFostering/$packageName.git";
 
     if (($counter % 50) == 0) {
         /** @var \Github\Api\RateLimit\RateLimitResource $rateLimits */
@@ -30,63 +32,19 @@ foreach ($packageNames as $packageName) {
         echo " ($counter / $numberOfPackages) rateLimit({$rateLimits->getLimit()} / {$rateLimits->getRemaining()} / {$secondsTillReset}s )\n";
     }
     $counter++;
-    $doesExistAlready = Tooling\githubRepositoryExists(
-        $repo,
-        $packageName,
-        $vendorName
-    );
-    if ($doesExistAlready) {
-        echo "S";
+    if ($counter<0) {
+        echo ".";
         continue;
     }
-    Tooling\githubRepositoryCreate(
-        $repo,
-        $packageName,
-        $vendorName
+    Tooling\githubAddOrigin(
+        $gitDirectory,
+        $gitRemoteUrl
+    );
+    Tooling\githubPushRepository(
+        $gitDirectory,
+        $gitRemoteUrl
     );
 
-    echo "C";
+    echo "P";
 }
-
-
-
-
-return;
-$query =<<<'GRAPHQL'
-query {
-  repository(owner:"$vendorName") {
-    issues(last:20, states:CLOSED) {
-      edges {
-        node {
-          title
-          url
-          labels(first:5) {
-            edges {
-              node {
-                name
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-GRAPHQL;
-
-
-$graphQl->execute();
-
-
-return;
-
-$existingRepositories = $repo->org(
-    $vendorName,
-    [
-        'sort' => 'full_name',
-    ]
-);
-
-var_dump($existingRepositories);
-
 
