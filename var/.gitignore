@@ -2,4 +2,4 @@
 !packageNames.json
 !connectPackageIndex.json
 !connectPackageVersionIndex.json
-
+!/log/

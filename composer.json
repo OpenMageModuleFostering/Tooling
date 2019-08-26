@@ -10,6 +10,7 @@
     ],
     "require": {
         "knplabs/github-api": "^2.11",
-        "php-http/guzzle6-adapter": "^1.1"
+        "php-http/guzzle6-adapter": "^1.1",
+      "ext-json": "*"
     }
 }

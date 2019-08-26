@@ -2,8 +2,7 @@
 
 use OpenMageModuleFostering\Tooling;
 
-require __DIR__ . '/../src/functions.php';
-$config = require __DIR__ . '/../config.php';
+require __DIR__ . '/../bootstrap.php';
 
 $packageIndex = json_decode(file_get_contents(Tooling\getConfig('var_dir').'connectPackageIndex.json'), true);
 
@@ -44,7 +43,7 @@ foreach ($packageIndex as $package) {
         $packageVersions[] = [
             'version' => $version,
             'dist_url' => $downloadUrl,
-            'has_error' => false === $packageFile,
+            'has_error' => false === $packageFile || "" === $packageFile,
         ];
     }
     if (!empty($packageVersions)) {
@@ -59,7 +58,7 @@ foreach ($packageIndex as $package) {
 
 file_put_contents(
     Tooling\getConfig('var_dir').'connectPackageVersionIndex.json',
-    json_encode($connectPackageIndex, JSON_PRETTY_PRINT)
+    json_encode($packageVersionIndex, JSON_PRETTY_PRINT)
 );
 
 

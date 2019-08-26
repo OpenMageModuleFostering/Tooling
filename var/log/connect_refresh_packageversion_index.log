@@ -1,0 +1,375 @@
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php:12
+Stack trace:
+#0 {main}
+  thrown in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on line 12
+
+
+
+
+
+
+                       thrown in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on line 12
+
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+<?xml version="1.0" ?>
+<releases>
+            <r>
+            <v>1.9.4.2</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.4.1</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.4.0</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.10</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.9</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.8</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.7</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.6</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.5</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.4</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.3</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.2</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.1</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.3.0</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.2.4</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.2.3</v>
+            <s>stable</s>
+            <d>2019-08-25</d>
+        </r>
+            <r>
+            <v>1.9.2.2</v>
+            <s>stable</s>
+            <d>2015-10-27</d>
+        </r>
+            <r>
+            <v>1.9.2.1</v>
+            <s>stable</s>
+            <d>2015-07-29</d>
+        </r>
+            <r>
+            <v>1.9.2.0</v>
+            <s>stable</s>
+            <d>2015-06-26</d>
+        </r>
+            <r>
+            <v>1.9.1.1</v>
+            <s>stable</s>
+            <d>2015-04-29</d>
+        </r>
+            <r>
+            <v>1.9.1.0</v>
+            <s>stable</s>
+            <d>2014-11-05</d>
+        </r>
+            <r>
+            <v>1.8.1.0</v>
+            <s>stable</s>
+            <d>2013-11-22</d>
+        </r>
+            <r>
+            <v>1.8.0.0</v>
+            <s>stable</s>
+            <d>2013-09-24</d>
+        </r>
+            <r>
+            <v>1.8.0.0-alpha1-alpha</v>
+            <s>alpha</s>
+            <d>2013-04-19</d>
+        </r>
+            <r>
+            <v>1.5.0.0</v>
+            <s>stable</s>
+            <d>2011-07-11</d>
+        </r>
+            <r>
+            <v>1.5.0.0-rc2-beta</v>
+            <s>beta</s>
+            <d>2011-02-03</d>
+        </r>
+            <r>
+            <v>1.5.0.0-rc1-beta</v>
+            <s>beta</s>
+            <d>2011-01-27</d>
+        </r>
+            <r>
+            <v>1.5.0.0-beta2-beta</v>
+            <s>beta</s>
+            <d>2011-01-21</d>
+        </r>
+            <r>
+            <v>1.5.0.0-beta1-beta</v>
+            <s>beta</s>
+            <d>2011-01-13</d>
+        </r>
+            <r>
+            <v>1.5.0.0-alpha2-alpha</v>
+            <s>alpha</s>
+            <d>2010-12-29</d>
+        </r>
+    </releases>
+
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+PHP Fatal error:  Uncaught Error: Call to a member function getElementsByTagName() on array in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php:19
+Stack trace:
+#0 {main}
+  thrown in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on line 19
+
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+<?xml version="1.0"?>
+<package>
+    <name>Lib_Google_Checkout</name>
+    <version>1.9.4.2</version>
+    <stability>stable</stability>
+    <license>Apache License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Google Checkout Library</summary>
+    <description>Google Checkout Library</description>
+    <notes>1.9.4.2</notes>
+    <authors><author><name>Magento Core Team</name><user>core</user><email>core@magentocommerce.com</email></author></authors>
+    <date>2019-06-13</date>
+    <time>15:58:01</time>
+    <contents></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
+
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+Number of Packages: 3910
+EEEEE^C
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+Number of Packages: 3910
+DDDDDDDDDDDDDDDDEDDDDDDDEEDDEEEDEEEEEEEDEDEEEEEED (50 / 3910)
+DDEEPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Locale_Mage_community_fr_FR/1.4.1.0/Locale_Mage_community_fr_FR-1.4.1.0.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DEEEEEEDEEDEEDDDDEEDDDEPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Interface_Frontend_Default_Blank/1.7.0.0-rc1/Interface_Frontend_Default_Blank-1.7.0.0-rc1.tgz): failed to open stream: HTTP request fail
+ed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Interface_Frontend_Default_Blank/1.7.0.0-beta1/Interface_Frontend_Default_Blank-1.7.0.0-beta1.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 No
+t Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDEDDDDDDDDDDDDDEDDEDED (100 / 3910)
+DDDDDDDEDDEDDEEDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Dibs/1.0.0.12/Dibs-1.0.0.12.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Dibs/1.0.0.11/Dibs-1.0.0.11.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Dibs/1.0.0.10/Dibs-1.0.0.10.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Manufacturer_Model_Number/3.3/Manufacturer_Model_Number-3.3.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/BBSNetAxept_Norway/1.6.3/BBSNetAxept_Norway-1.6.3.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDDDDDDDDDEEDDEEDDDEEDDDDDDEDD (150 / 3910)
+EDDDEEDEDDEEDDEEPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/MondialRelay_Pointsrelais/1.2.4/MondialRelay_Pointsrelais-1.2.4.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DEDDDEEDDDDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Asperience_Addresscomplete/0.2.1/Asperience_Addresscomplete-0.2.1.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Asperience_Addresscomplete/0.2.0/Asperience_Addresscomplete-0.2.0.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDDDEDDEDEDEEDDEDDEDED (200 / 3910)
+DPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Asperience_Printorderline/0.1.3/Asperience_Printorderline-0.1.3.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDDDDDDDDEEDDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Lengow_Export/1.1.2/Lengow_Export-1.1.2.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Lengow_Export/1.1.1/Lengow_Export-1.1.1.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Lengow_Export/1.1.0/Lengow_Export-1.1.0.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DEEDEEDEEDDEEDDDDDDDDEDEDDDEDDDDDED (250 / 3910)
+DPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Fontis_EwayAu/1.1.2/Fontis_EwayAu-1.1.2.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDDDEDDDDDDDDEDDDEDDDEDDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Flagbit_Faq/1.1.1/Flagbit_Faq-1.1.1.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Flagbit_Faq/1.1.0/Flagbit_Faq-1.1.0.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DEPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/MageBase_DpsPaymentExpress/1.1.5/MageBase_DpsPaymentExpress-1.1.5.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/MageBase_DpsPaymentExpress/1.1.4/MageBase_DpsPaymentExpress-1.1.4.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDDDDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.9/Rcg_Custombundle-1.0.9.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.8/Rcg_Custombundle-1.0.8.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.7/Rcg_Custombundle-1.0.7.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.6/Rcg_Custombundle-1.0.6.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.5/Rcg_Custombundle-1.0.5.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.4/Rcg_Custombundle-1.0.4.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.3/Rcg_Custombundle-1.0.3.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Rcg_Custombundle/1.0.2/Rcg_Custombundle-1.0.2.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDEDDEPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Phoenix_Worldpay/1.2.6/Phoenix_Worldpay-1.2.6.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Phoenix_Worldpay/1.2.5/Phoenix_Worldpay-1.2.5.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDDDDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Iridiumcorp_Tpg/1.8.0/Iridiumcorp_Tpg-1.8.0.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Iridiumcorp_Tpg/1.7.1/Iridiumcorp_Tpg-1.7.1.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Iridiumcorp_Tpg/1.7.0/Iridiumcorp_Tpg-1.7.0.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDE (300 / 3910)
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/MTurbo/1.0.9/MTurbo-1.0.9.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/MTurbo/1.0.8/MTurbo-1.0.8.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DEEEDDDDDDDDEDEDEDDDEEEEDDDDDDDEEEDEDDDDEDPHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/Magento_Mobile/1.9.1.1/Magento_Mobile-1.9.1.1.tgz): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Foun
+d
+ in F:\OpenMage_Modules\tooling\src\functions.php on line 31
+DDDDDDDD (350 / 3910)
+DDDEDDEDD^C
+F:\OpenMage_Modules\tooling>
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+Number of Packages: 3910
+DDDDDDDDDDDDDDDDEDDDDDDDEEDDEEEDEEEEEE^C
+F:\OpenMage_Modules\tooling>php bin\connect_refresh_packageversion_index.php
+Number of Packages: 3910
+DDDDDDDDDDDDDDDDEDDDDDDDEEDDEEEDEEEEEEEDEDEEEEEED (50 / 3910)
+DDEEDEEEEEEDEEDEEDDDDEEDDDEDDEDDDDDDDDDDDDDEDDEDED (100 / 3910)
+DDDDDDDEDDEDDEEDDDDDDDDDDDDDDDEEDDEEDDDEEDDDDDDEDD (150 / 3910)
+EDDDEEDEDDEEDDEEDEDDDEEDDDDDDDDDEDDEDEDEEDDEDDEDED (200 / 3910)
+DDDDDDDDDDDEEDDDEEDEEDEEDDEEDDDDDDDDEDEDDDEDDDDDED (250 / 3910)
+DDDDDDEDDDDDDDDEDDDEDDDEDDDEDDDDDDDDDEDDEDDDDDDDDE (300 / 3910)
+DEEEDDDDDDDDEDEDEDDDEEEEDDDDDDDEEEDEDDDDEDDDDDDDDD (350 / 3910)
+DDDEDDEDDDDEEDDDDDDDEDDDDDDDDDDDDDEEDDDEDDDDEDDDDE (400 / 3910)
+DEEDDEEEDDEDDEDDDDEDEEDDDDDDDDDDDDDDDDDEEEEEEDDDDD (450 / 3910)
+DDDDEDDDEEDDDDDDEDDDDEEEDDDDDDDDDDDDDEDEEDDDEEDDDD (500 / 3910)
+EDDEDEDDDDEEEDDDEDDDDEDDDEDDDDDEDDEEDEEEEDEDDEDDDD (550 / 3910)
+DDDEDEDDDEDDDDDDDEDDDDEEEDDDDDDDDEDEDDEEDEDEDDDEDD (600 / 3910)
+DDEDDDDEDEEDDDDEDEDDDDDDEEEDEDDDEDEEEDDDEEEDDDDDEE (650 / 3910)
+DEEDDEDDDEDDEEDDDDDDDDDEDEDDDDDDDDDDDDDDDEDEDDDEDD (700 / 3910)
+DDDDDDDDEDDDDDDDDDEDDEDDDDDDDDDDDEEDEDEDDEEDDDDDDD (750 / 3910)
+DDDDDDDDDDDEDDEDDDDDDDDDDDDDDDDEDDDDDDDDDDDDEDDDDD (800 / 3910)
+DDDDDDDDDDDDDDDDDEDDEDDEEDDEDEEDDEDDDDDDDDDDDDDDDD (850 / 3910)
+EDEDDDDEEDDDDDDDDDDDDDDDDDDDDDDEEDDDDDEDDDDDDDDDDD (900 / 3910)
+DDDDDDDDDDDDEDDDEDEDEEDEDDDEDEDEDDDDDDDEDDDDDDDDDD (950 / 3910)
+DDDDDDDEDDDDDDDDDDDDDDDDDDEDDDDDDDDDDEDDDDEEDDDDDD (1000 / 3910)
+DDDDDDDDDDEDDDDDDEDDDEDDDEEEDDEDEDDDDDDDDEDDDDDDDD (1050 / 3910)
+EDDDDDDDDDDDDDDEDDDDDDDDDDDDEDDEDDDDDDDDDDDDDDEDED (1100 / 3910)
+DDDDDDDDDDDEDDEDDDDDDDDDDDDDDDDDDDEEDDDDDDDDDDDDDE (1150 / 3910)
+DDDDDDDEDDDDDDDDDDDEDDDDDDDDDDDEDDDDDDDDDDDDEDDDDD (1200 / 3910)
+DDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDD (1250 / 3910)
+DEDDDDDDDDDDDDDDDEDDDDDDDDDEDDDDDDEDEDDDDDDDDDDDDD (1300 / 3910)
+EDDDDEDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDD (1350 / 3910)
+DDDEDEDDDDDEDDDDDDDDEDEDDEDDDDDDDDDEEDDDDDDEDDEDDD (1400 / 3910)
+DDDDDDDDEEDDDEDDDEDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDD (1450 / 3910)
+DDDDDDEDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDD (1500 / 3910)
+DDDDDDDDDDDDEDEDDDDDDEDDEEDDDDDDDDDDDDDDDDEDDDDDDD (1550 / 3910)
+EDEDEDEDDEDDDDDDDEDDDDDDEDDDDDDDEDEEEDDDDDDEDDDDDD (1600 / 3910)
+DDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDEDEDDDDDDDDD (1650 / 3910)
+DDDDDDDDEDEDEDDDDDDEDDDEDDDDDDDDDDDDDEDDDDDDDDDDDD (1700 / 3910)
+DDDDDDDDDDDDDDDDDDDDEDDEDDDDEEDDDDDDDDDDDDDDDDDDDD (1750 / 3910)
+DDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDED (1800 / 3910)
+DDDDDEDDDDEEDDDDDDDDDDDDDDEDEDDDDDDDDDDDDDDDDDDDDD (1850 / 3910)
+DDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (1900 / 3910)
+DDDDDDDDDDEDDDDDDDDDEDEDDDDDDDDDEDDDDDDDDDDDDDDDDD (1950 / 3910)
+DDDDDDDDDEDDDDDDEDDDDDDDDDEDDEDDDDDDDDDDDDDDDDDDDD (2000 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDEDDDDDDDED (2050 / 3910)
+DDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDEEDEDDDDDDDDDD (2100 / 3910)
+DDDDDDEDDEDDDDDEDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDD (2150 / 3910)
+DDDDDDDDDDDDEDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDD (2200 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDEDDDDDDDD (2250 / 3910)
+DDDDDDEDDDDDDDDDDEDDDDDDEEDDDDDDDDDDDDDDDDDDDDDDDD (2300 / 3910)
+DDDDEDDDEEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (2350 / 3910)
+DDEDDDDDDDDEDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (2400 / 3910)
+DDDEDDDEDDDDDDDDDDDDDDDDDDDDDEEDDDDDDDDDDDDDDEDDDD (2450 / 3910)
+DDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDEEEDDDDDDEDDD (2500 / 3910)
+DDDDDDDDDDDDDDEDEDEDDDEDDDDDDDDDDDDDDDDDEDDDDEDDDD (2550 / 3910)
+EDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDEDDDDDEDDDDDDDDD (2600 / 3910)
+DDDDDDDDDDDEDDDDDDDEDDDDDDDDDDDDDDDDEEDEDDEDDDDDED (2650 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEEDEDDEDDDDDDDEED (2700 / 3910)
+EDDDDDDDDDDDDDDDDDDDEDDDEDDDDDDDDDDDDDDDDDDDDDDDDD (2750 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDEEDDEDEDEDDDD (2800 / 3910)
+DDDEDDDDDDEDEDDDEDDDDDDDDDDDDDDDDDDEEDDDDDDDDDDDDD (2850 / 3910)
+DDDDDDDDDDDDDDDDDDDDEDDDDDDEDDDDDDDDDDDDDDDDEDDDDD (2900 / 3910)
+DDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (2950 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDD (3000 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDD (3050 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDD (3100 / 3910)
+DDDDDDDDDDEDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDD (3150 / 3910)
+DDDDDDDDDDDDDDDDEDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3200 / 3910)
+DDDDDEDDDEDDDDDDDDDDDDDDDEDDDDDDEDDDDDDDDDDDDDDDDD (3250 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDD (3300 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDEDDD (3350 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDD (3400 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3450 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3500 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3550 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3600 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3650 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDPHP Warning:  file_get_contents(): SSL: Eine vorhandene Verbindung wurde vom Remotehost geschlossen.
+ in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on line 22
+PHP Notice:  file_get_contents(): send of 114 bytes failed with errno=10054 Eine vorhandene Verbindung wurde vom Remotehost geschlossen.
+ in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on line 22
+PHP Warning:  file_get_contents(https://connect20.magentocommerce.com/community/AK_Multiaddtocart/releases.xml): failed to open stream: HTTP request failed!  in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on li
+ne 22
+PHP Warning:  DOMDocument::loadXML(): Empty string supplied as input in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on line 25
+EDDDDDDDDDDDDDDDDDDD (3700 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3750 / 3910)
+EDDDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (3800 / 3910)
+DDDDDDDDDDEDDDDDDDDDDDDDDDDDDDDDDDDDDDDEDDDDDDDDDD (3850 / 3910)
+DDDDDDDDDDDDDDDDDDDDDDDDDEDDEDDDDDDDDDDDDDDDDDDDDD (3900 / 3910)
+DDDDDDDDDDDPHP Notice:  Undefined variable: connectPackageIndex in F:\OpenMage_Modules\tooling\bin\connect_refresh_packageversion_index.php on line 62
+
