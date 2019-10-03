@@ -13,6 +13,7 @@ class GitPush extends AbstractTask
     {
         chdir($this->repositoryInfo->getLocalBaseDirectory());
         passtruh_wrapper("git push -u origin master");
+        sleep(2);
 
 
     }

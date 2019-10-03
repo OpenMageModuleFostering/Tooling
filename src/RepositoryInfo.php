@@ -8,14 +8,17 @@ class RepositoryInfo
 {
     protected $localDirectory;
     protected $name;
+    protected $archivedInfo;
 
     public function __construct(
         $name,
-        $localDirectory
+        $localDirectory,
+        $archivedInfo = null
     )
     {
         $this->localDirectory = $localDirectory;
         $this->name = $name;
+        $this->archivedInfo = $archivedInfo;
     }
 
     public function getName()
@@ -31,6 +34,20 @@ class RepositoryInfo
     public function getLocalAbsolutePath($path)
     {
         return $this->localDirectory . '/' . $path;
+    }
+
+    public function isArchived()
+    {
+        return !is_null($this->archivedInfo);
+    }
+
+    public function getArchivedReplacementName()
+    {
+        return $this->archivedInfo['replacement_name'];
+    }
+    public function getArchivedReplacementUrl()
+    {
+        return $this->archivedInfo['replacement_url'];
     }
 
 }

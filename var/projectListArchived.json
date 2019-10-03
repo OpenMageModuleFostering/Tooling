@@ -1,0 +1,8 @@
+[
+  {
+    "name": "zookal_mock",
+    "reason": "externally maintained",
+    "replacement_name": "zookal/magento-mock",
+    "replacement_url": "https://github.com/Zookal/magento-mock"
+  }
+]

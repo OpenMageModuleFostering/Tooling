@@ -6,8 +6,11 @@ namespace OpenMageModuleFostering\Tooling\Job;
 
 use OpenMageModuleFostering\Tooling\RepositoryInfo;
 use OpenMageModuleFostering\Tooling\Task\AbstractTask;
+use OpenMageModuleFostering\Tooling\Task\ComposerJsonAbandonedUpdate;
 use OpenMageModuleFostering\Tooling\Task\ComposerJsonKeywordsUpdate;
+use OpenMageModuleFostering\Tooling\Task\ComposerJsonLicenseFix;
 use OpenMageModuleFostering\Tooling\Task\ComposerJsonMultilineFix;
+use OpenMageModuleFostering\Tooling\Task\ComposerJsonNameUpdate;
 use OpenMageModuleFostering\Tooling\Task\GitCommit;
 use OpenMageModuleFostering\Tooling\Task\ReadmeUpdate;
 
@@ -22,7 +25,19 @@ class UpdateProjectInfo extends AbstractJob
             $repositoryInfo,
             $this->config
         );
+        $tasks[] = new ComposerJsonNameUpdate(
+            $repositoryInfo,
+            $this->config
+        );
+        $tasks[] = new ComposerJsonAbandonedUpdate(
+            $repositoryInfo,
+            $this->config
+        );
         $tasks[] = new ComposerJsonKeywordsUpdate(
+            $repositoryInfo,
+            $this->config
+        );
+        $tasks[] = new ComposerJsonLicenseFix(
             $repositoryInfo,
             $this->config
         );

@@ -8,7 +8,7 @@ use OpenMageModuleFostering\Tooling\RepositoryInfo;
 use OpenMageModuleFostering\Tooling\Task\AbstractTask;
 use OpenMageModuleFostering\Tooling\Task\GitPush;
 
-class UpdateProjectInfo extends AbstractJob
+class PushToGithub extends AbstractJob
 {
 
     public function execute(RepositoryInfo $repositoryInfo)

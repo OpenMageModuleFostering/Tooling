@@ -22,6 +22,7 @@ class RepositoryProvider
     protected $currentProjectList;
 
     protected $projectsCache = [];
+    protected $projectsArchivedCache = [];
 
     public function __construct($projectlist)
     {
@@ -46,9 +47,16 @@ class RepositoryProvider
                 $this->projectsCache = [
                     'zsoltnet_ledgerinvoice',
                     'zookal_mock',
+                    'addthis_sharingtool',
                 ];
                 break;
         }
+
+        $this->projectsArchivedCache = json_decode(
+            file_get_contents(__DIR__ . '/../var/projectListArchived.json'),
+            true
+        );
+
     }
 
 
@@ -66,6 +74,16 @@ class RepositoryProvider
         return $projectList;
     }
 
+    protected function getArchivedInfoByName($name)
+    {
+        foreach ($this->projectsArchivedCache as $archivedProject)
+        {
+            if ($archivedProject['name'] === $name) {
+                return $archivedProject;
+            }
+        }
+        return null;
+    }
 
     public function getCount()
     {
@@ -78,7 +96,8 @@ class RepositoryProvider
             $name = $this->projectsCache[$index];
             $result = new RepositoryInfo(
                 $name,
-                Tooling\getConfig('var_dir') . 'git_modules/' . $name
+                Tooling\getConfig('var_dir') . 'git_modules/' . $name,
+                $this->getArchivedInfoByName($name)
             );
             return $result;
         }
