@@ -9,12 +9,14 @@ use Github\Exception\RuntimeException;
  * @param string $path
  * @return mixed
  */
-function getConfig($path) {
+function getConfig($path)
+{
     $config = require __DIR__ . '/../config.php';
     return $config[$path];
 }
 
-function fetch_file_with_cache($url, $throttle = 0) {
+function fetch_file_with_cache($url, $throttle = 0)
+{
     $escapedUrl = preg_replace('/[^A-Za-z0-9_\-]/', '_', $url);
     $parsedUrl = parse_url($url);
     $escapedDomain = preg_replace('/[^A-Za-z0-9_\-]/', '_', $parsedUrl['host']);
@@ -30,7 +32,7 @@ function fetch_file_with_cache($url, $throttle = 0) {
     }
     $content = file_get_contents($url);
     if (!file_exists(getConfig('cache_dir') . 'file_fetcher/' . $escapedDomain)) {
-        mkdir(getConfig('cache_dir') . 'file_fetcher/' . $escapedDomain,0777,true);
+        mkdir(getConfig('cache_dir') . 'file_fetcher/' . $escapedDomain, 0777, true);
     }
     file_put_contents($cachedPath, $content);
 
@@ -39,7 +41,8 @@ function fetch_file_with_cache($url, $throttle = 0) {
 }
 
 
-function arrayDeepSet(&$array, $value, ...$keys) {
+function arrayDeepSet(&$array, $value, ...$keys)
+{
     if (isset($keys[4])) {
         if (!isset($array[$keys[0]])) {
             $array[$keys[0]] = [];
@@ -93,7 +96,7 @@ function arrayDeepSet(&$array, $value, ...$keys) {
 
 function passtruh_wrapper($command)
 {
-    echo "executing: ". $command . PHP_EOL;
+    echo "executing: " . $command . PHP_EOL;
     passthru($command);
 }
 
@@ -107,14 +110,14 @@ function initializeGitRepository($directory)
 
 function generateComposerJsonContent($packageDefinition)
 {
-    if(!isset($packageDefinition['license'])){
+    if (!isset($packageDefinition['license'])) {
         $packageDefinition['license'] = [];
     }
     if (count($packageDefinition['license']) < 1) {
         $packageLicense = '';
         file_put_contents(
-            getConfig('var_dir').'license_without.log',
-            $packageDefinition['name'].PHP_EOL,
+            getConfig('var_dir') . 'license_without.log',
+            $packageDefinition['name'] . PHP_EOL,
             FILE_APPEND
         );
     }
@@ -125,7 +128,7 @@ function generateComposerJsonContent($packageDefinition)
     if (count($packageDefinition['license']) == 1) {
         $packageLicense = $packageDefinition['license'][0];
     }
-    $packageRealName = explode('/',$packageDefinition['name'])[1];
+    $packageRealName = explode('/', $packageDefinition['name'])[1];
     $vendorName = getConfig('new_vendor');
     $authorsJson = json_encode($packageDefinition['authors'], JSON_PRETTY_PRINT);
     $content = <<<JSON
@@ -146,7 +149,7 @@ JSON;
 
 }
 
-function addVersionToGitRepository($directory, $packageDefinition )
+function addVersionToGitRepository($directory, $packageDefinition)
 {
     $timestamp = microtime();
     $timestamp = str_replace(' ', '_', $timestamp);
@@ -155,8 +158,8 @@ function addVersionToGitRepository($directory, $packageDefinition )
     passtruh_wrapper('git add .');
     passtruh_wrapper('git rm -r .');
     $content = fetch_file_with_cache($packageDefinition['dist']['url']);
-    $tempModulePath = getConfig('cache_dir')."/temp{$timestamp}_module.tgz";
-    $tempModuleTarPath = getConfig('cache_dir')."/temp{$timestamp}_module.tar";
+    $tempModulePath = getConfig('cache_dir') . "/temp{$timestamp}_module.tgz";
+    $tempModuleTarPath = getConfig('cache_dir') . "/temp{$timestamp}_module.tar";
     file_put_contents($tempModulePath, $content);
     echo "extracting package: {$packageDefinition['name']} in version {$packageDefinition['version']} \n";
     $phar = new \PharData($tempModulePath, \FilesystemIterator::SKIP_DOTS);
@@ -166,8 +169,8 @@ function addVersionToGitRepository($directory, $packageDefinition )
     unlink($tempModuleTarPath);
     file_put_contents('composer.json', generateComposerJsonContent($packageDefinition));
     passtruh_wrapper('git add .');
-    passtruh_wrapper('git commit -m "import connect version '.$packageDefinition['version'].' " --author="OpenMage Import Bot <flyingmana+openmage_bot@googlemail.com>"');
-    passtruh_wrapper('git tag -a '.$packageDefinition['version'].' -m "import connect version '.$packageDefinition['version'].' "');
+    passtruh_wrapper('git commit -m "import connect version ' . $packageDefinition['version'] . ' " --author="OpenMage Import Bot <flyingmana+openmage_bot@googlemail.com>"');
+    passtruh_wrapper('git tag -a ' . $packageDefinition['version'] . ' -m "import connect version ' . $packageDefinition['version'] . ' "');
 
 }
 
@@ -175,7 +178,8 @@ function githubRepositoryExists(
     \Github\Api\Repo $apiRepo,
     $repositoryName,
     $organizationName
-) {
+)
+{
     try {
         $repositoryInfo = $apiRepo->show($organizationName, $repositoryName);
     } catch (RuntimeException $exception) {
@@ -189,7 +193,8 @@ function githubRepositoryCreate(
     \Github\Api\Repo $apiRepo,
     $repositoryName,
     $organizationName
-) {
+)
+{
     $apiRepo->create(
         $repositoryName,
         $description = '',
@@ -208,7 +213,8 @@ function githubRepositoryCreate(
 function githubAddOrigin(
     $gitDirectory,
     $remoteUrl
-) {
+)
+{
     chdir($gitDirectory);
     passtruh_wrapper("git remote add origin $remoteUrl");
 }
@@ -216,7 +222,8 @@ function githubAddOrigin(
 function githubPushRepository(
     $gitDirectory,
     $remoteUrl
-) {
+)
+{
     chdir($gitDirectory);
     passtruh_wrapper("git push --tags -f -u origin master");
 }

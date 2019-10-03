@@ -8,9 +8,15 @@
             "email": "flyingmana@googlemail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "OpenMageModuleFostering\\Tooling\\": "src/"
+        }
+    },
     "require": {
         "knplabs/github-api": "^2.11",
         "php-http/guzzle6-adapter": "^1.1",
-      "ext-json": "*"
+      "ext-json": "*",
+        "symfony/console": "^4.3"
     }
 }
